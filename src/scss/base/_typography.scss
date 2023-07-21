@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+@font-face {
+  font-family: "Raleway";
+  font-weight: 400 700;
+  src: url("../../assets/fonts/Raleway-VariableFont_wght.ttf");
+}
+
+body {
+  font: 400 0.875rem "Raleway", sans-serif;
+}
+
+:where(h1, h2, h3, h4, h5, h6, .bold) {
+  font-weight: 700;
+}
