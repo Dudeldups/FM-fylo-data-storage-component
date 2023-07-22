@@ -3,13 +3,32 @@
 @font-face {
   font-family: "Raleway";
   font-weight: 400 700;
-  src: url("../../assets/fonts/Raleway-VariableFont_wght.ttf");
+  src: url("../assets/fonts/Raleway-VariableFont_wght.ttf");
 }
 
 body {
   font: 400 0.875rem "Raleway", sans-serif;
+  color: $clr-text-light;
 }
 
 :where(h1, h2, h3, h4, h5, h6, .bold) {
   font-weight: 700;
+}
+
+.large {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.usage {
+  &__summary {
+    @include mq($until: $bp-desktop) {
+      text-align: center;
+    }
+  }
+
+  &__amount-left {
+    color: $clr-bg-dark;
+    text-align: center;
+  }
 }

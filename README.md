@@ -16,7 +16,7 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
 ### Links
 
 - [Solution on Frontend Mentor]()
-- [Live site]()
+- [Live site](https://dudeldups.github.io/FM-fylo-data-storage-component/)
 
 ### Screenshot
 
@@ -33,7 +33,7 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
 ### Built with
 
 - HTML5
-- SCSS
+- SCSS (BEM)
 
 ## Author
 

@@ -1,3 +1,12 @@
 @use "functions" as *;
 
 // colors
+
+$clr-bg-dark: #0c122c;
+$clr-bg-light: #1e2d69;
+$clr-text-light: #dbd9ff;
+$clr-white: #fff;
+
+// breakpoints
+
+$bp-desktop: 900px;

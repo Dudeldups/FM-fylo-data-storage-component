@@ -1,1 +1,8 @@
 @use "../abstracts/" as *;
+
+.btn {
+  height: 3rem;
+  aspect-ratio: 1 / 1;
+  background-color: $clr-bg-dark;
+  border-radius: 0.625rem;
+}

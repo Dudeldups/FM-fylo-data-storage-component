@@ -69,12 +69,83 @@ button {
 @font-face {
   font-family: "Raleway";
   font-weight: 400 700;
-  src: url("../../assets/fonts/Raleway-VariableFont_wght.ttf");
+  src: url("../assets/fonts/Raleway-VariableFont_wght.ttf");
 }
 body {
   font: 400 0.875rem "Raleway", sans-serif;
+  color: #dbd9ff;
 }
 
 :where(h1, h2, h3, h4, h5, h6, .bold) {
   font-weight: 700;
+}
+
+.large {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+@media (max-width: 56.24em) {
+  .usage__summary {
+    text-align: center;
+  }
+}
+.usage__amount-left {
+  color: #0c122c;
+  text-align: center;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  background: #0c122c url("../assets/images/bg-mobile.png") no-repeat;
+  background-size: cover;
+}
+
+.container-bg {
+  background: #1e2d69;
+}
+
+.main-container {
+  display: grid;
+  gap: clamp(
+    1rem,
+    2.84vw + 0.29rem,
+    1.88rem
+  );
+  max-width: 21.875rem;
+  margin-inline: auto;
+}
+
+.btn {
+  height: 3rem;
+  aspect-ratio: 1/1;
+  background-color: #0c122c;
+  border-radius: 0.625rem;
+}
+
+.controls {
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+  border-top-right-radius: 6.25rem;
+}
+.controls__button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.usage {
+  padding: 2rem 2rem 0;
+  border-radius: 0.625rem;
+}
+.usage__amount-left {
+  padding: 1rem;
+  width: 11.1875rem;
+  height: 4.5rem;
+  margin-inline: auto;
+  background: #fff;
+  border-radius: 0.625rem;
+  transform: translateY(50%);
 }/*# sourceMappingURL=main.css.map */

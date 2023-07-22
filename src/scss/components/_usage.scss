@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+
+.usage {
+  padding: 2rem 2rem 0;
+  border-radius: 0.625rem;
+
+  &__amount-left {
+    padding: 1rem;
+    width: 11.1875rem;
+    height: 4.5rem;
+    margin-inline: auto;
+    background: $clr-white;
+    border-radius: 0.625rem;
+    transform: translateY(50%);
+  }
+}
