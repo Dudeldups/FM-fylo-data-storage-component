@@ -118,8 +118,8 @@ body {
 @media (min-width: 50em) {
   body {
     background-image: url("../assets/images/bg-desktop.png");
-    background-position-y: 50%;
-    background-size: cover;
+    background-position: bottom;
+    background-size: 100% 50%;
   }
 }
 
@@ -160,23 +160,37 @@ body {
   margin-top: 2rem;
 }
 
-.usage {
-  padding: 2rem 2rem 0;
+.usage__wrapper {
+  padding: 2rem clamp(
+    1rem,
+    30vw + -5rem,
+    2.5rem
+  ) 0;
   border-radius: 0.625rem;
   width: 100%;
 }
 .usage__amount-left {
+  position: relative;
+  inset: auto 0 0;
+  transform: translateY(50%);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.56rem;
+  margin-top: 0.25rem;
+  margin-inline: auto;
   padding: 1rem;
   width: 11.1875rem;
   height: 4.5rem;
-  margin-inline: auto;
   background: #fff;
   border-radius: 0.625rem;
-  transform: translateY(50%);
+}
+@media (min-width: 50em) {
+  .usage__amount-left::after {
+    content: url("../assets/images/triangle.svg");
+    position: absolute;
+    inset: auto 0 0 auto;
+  }
 }
 
 .bar {
@@ -190,9 +204,9 @@ body {
 }
 .bar__progress {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 0.125rem;
-  width: 81.5%;
+  width: calc(81.5%);
   height: 100%;
   background: linear-gradient(90deg, #ffa197, #ff4a95);
   border-radius: 0.625rem;

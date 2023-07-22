@@ -1,21 +1,34 @@
 @use "../abstracts/" as *;
 
 .usage {
-  padding: 2rem 2rem 0;
-  border-radius: 0.625rem;
-  width: 100%;
+  &__wrapper {
+    padding: 2rem get-clamp(1rem, 2.5rem, 20rem, 25rem) 0;
+    border-radius: 0.625rem;
+    width: 100%;
+  }
 
   &__amount-left {
+    position: relative;
+    inset: auto 0 0;
+    transform: translateY(50%);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.56rem;
+    margin-top: 0.25rem;
+    margin-inline: auto;
     padding: 1rem;
     width: 11.1875rem;
     height: 4.5rem;
-    margin-inline: auto;
     background: $clr-white;
     border-radius: 0.625rem;
-    transform: translateY(50%);
+
+    @include mq($bp-desktop) {
+      &::after {
+        content: url("../assets/images/triangle.svg");
+        position: absolute;
+        inset: auto 0 0 auto;
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "sass:math";
 
 .bar {
   position: relative;
@@ -10,10 +11,12 @@
   border-radius: 0.625rem;
 
   &__progress {
+    $progress: math.div(815, 1000) * 100;
+
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 0.125rem;
-    width: 81.5%;
+    width: calc(#{$progress}%);
     height: 100%;
     background: linear-gradient(90deg, $grad-yellow-red);
     border-radius: 0.625rem;
