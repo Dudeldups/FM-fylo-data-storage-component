@@ -3,10 +3,16 @@
 body {
   display: flex;
   flex-direction: column;
-  place-content: center;
+  justify-content: center;
   padding: 3rem 1.5rem;
   background: $clr-bg-dark url("../assets/images/bg-mobile.png") no-repeat;
   background-size: cover;
+
+  @include mq($bp-desktop) {
+    background-image: url("../assets/images/bg-desktop.png");
+    background-position-y: 50%;
+    background-size: cover;
+  }
 }
 
 .container-bg {
@@ -15,7 +21,13 @@ body {
 
 .main-container {
   display: grid;
-  gap: get-clamp(1rem, 1.88rem, 35rem, 40rem);
-  // margin-inline: auto;
-  width: 100%;
+  gap: 1rem;
+  margin-inline: auto;
+  width: min(100%, 21.875rem);
+
+  @include mq($bp-desktop) {
+    grid-template-columns: 21.875rem 1fr;
+    gap: 1.88rem;
+    width: min(100%, 57.5rem);
+  }
 }

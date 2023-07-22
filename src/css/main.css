@@ -89,7 +89,7 @@ body {
   opacity: 0.7;
 }
 
-@media (max-width: 56.24em) {
+@media (max-width: 49.99em) {
   .usage__summary {
     text-align: center;
   }
@@ -110,10 +110,17 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  place-content: center;
+  justify-content: center;
   padding: 3rem 1.5rem;
   background: #0c122c url("../assets/images/bg-mobile.png") no-repeat;
   background-size: cover;
+}
+@media (min-width: 50em) {
+  body {
+    background-image: url("../assets/images/bg-desktop.png");
+    background-position-y: 50%;
+    background-size: cover;
+  }
 }
 
 .container-bg {
@@ -122,12 +129,16 @@ body {
 
 .main-container {
   display: grid;
-  gap: clamp(
-    1rem,
-    17.6vw + -5.16rem,
-    1.88rem
-  );
-  width: 100%;
+  gap: 1rem;
+  margin-inline: auto;
+  width: min(100%, 21.875rem);
+}
+@media (min-width: 50em) {
+  .main-container {
+    grid-template-columns: 21.875rem 1fr;
+    gap: 1.88rem;
+    width: min(100%, 57.5rem);
+  }
 }
 
 .btn {
@@ -152,6 +163,7 @@ body {
 .usage {
   padding: 2rem 2rem 0;
   border-radius: 0.625rem;
+  width: 100%;
 }
 .usage__amount-left {
   display: flex;
