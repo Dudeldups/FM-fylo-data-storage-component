@@ -1,8 +1,9 @@
 @use "../abstracts/" as *;
 
 body {
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
   padding: 3rem 1.5rem;
   background: $clr-bg-dark url("../assets/images/bg-mobile.png") no-repeat;
   background-size: cover;
@@ -14,7 +15,7 @@ body {
 
 .main-container {
   display: grid;
-  gap: get-clamp(1rem, 1.88rem, 25rem, 56rem);
-  max-width: 21.875rem;
-  margin-inline: auto;
+  gap: get-clamp(1rem, 1.88rem, 35rem, 40rem);
+  // margin-inline: auto;
+  width: 100%;
 }

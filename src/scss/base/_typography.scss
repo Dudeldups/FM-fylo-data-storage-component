@@ -20,6 +20,10 @@ body {
   line-height: 2.5rem;
 }
 
+.text-opacity {
+  opacity: 0.7;
+}
+
 .usage {
   &__summary {
     @include mq($until: $bp-desktop) {
@@ -28,7 +32,15 @@ body {
   }
 
   &__amount-left {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.0625rem;
     color: $clr-bg-dark;
-    text-align: center;
+    text-transform: uppercase;
   }
+}
+
+.bar {
+  font-size: 0.75rem;
+  font-weight: 700;
 }

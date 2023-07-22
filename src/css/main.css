@@ -85,19 +85,32 @@ body {
   line-height: 2.5rem;
 }
 
+.text-opacity {
+  opacity: 0.7;
+}
+
 @media (max-width: 56.24em) {
   .usage__summary {
     text-align: center;
   }
 }
 .usage__amount-left {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
   color: #0c122c;
-  text-align: center;
+  text-transform: uppercase;
+}
+
+.bar {
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 body {
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
   padding: 3rem 1.5rem;
   background: #0c122c url("../assets/images/bg-mobile.png") no-repeat;
   background-size: cover;
@@ -111,11 +124,10 @@ body {
   display: grid;
   gap: clamp(
     1rem,
-    2.84vw + 0.29rem,
+    17.6vw + -5.16rem,
     1.88rem
   );
-  max-width: 21.875rem;
-  margin-inline: auto;
+  width: 100%;
 }
 
 .btn {
@@ -127,6 +139,7 @@ body {
 
 .controls {
   padding: 2.5rem;
+  width: min(100%, 21.875rem);
   border-radius: 0.625rem;
   border-top-right-radius: 6.25rem;
 }
@@ -141,6 +154,10 @@ body {
   border-radius: 0.625rem;
 }
 .usage__amount-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.56rem;
   padding: 1rem;
   width: 11.1875rem;
   height: 4.5rem;
@@ -148,4 +165,38 @@ body {
   background: #fff;
   border-radius: 0.625rem;
   transform: translateY(50%);
+}
+
+.bar {
+  position: relative;
+  margin-top: 1rem;
+  padding: 0.1875rem;
+  width: 100%;
+  height: 1.25rem;
+  background: rgba(12, 18, 44, 0.5);
+  border-radius: 0.625rem;
+}
+.bar__progress {
+  display: flex;
+  justify-content: end;
+  padding: 0.125rem;
+  width: 81.5%;
+  height: 100%;
+  background: linear-gradient(90deg, #ffa197, #ff4a95);
+  border-radius: 0.625rem;
+}
+.bar__white-dot {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border-radius: 50%;
+}
+.bar::before {
+  content: "0 GB";
+  position: absolute;
+  inset: 1.9rem auto auto 0;
+}
+.bar__amount-max {
+  position: absolute;
+  inset: 1.9rem 0 auto auto;
 }/*# sourceMappingURL=main.css.map */
