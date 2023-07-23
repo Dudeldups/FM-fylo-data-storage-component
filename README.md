@@ -15,18 +15,14 @@ This is a solution to the [Fylo data storage component challenge on Frontend Men
 
 ### Links
 
-- [Solution on Frontend Mentor]()
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/scss-fylo-data-storage-component-AUWGvyRbS_)
 - [Live site](https://dudeldups.github.io/FM-fylo-data-storage-component/)
 
 ### Screenshot
 
 #### Desktop
 
-![Solution]()
-
-#### Mobile
-
-![Solution]()
+![Solution](https://github.com/Dudeldups/FM-fylo-data-storage-component/blob/main/screenshots/solution.png)
 
 ## My process
 
