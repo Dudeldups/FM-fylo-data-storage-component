@@ -31,6 +31,11 @@ body {
     }
   }
 
+  &__amounts {
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
   &__amount-left {
     font-size: 0.75rem;
     font-weight: 700;
@@ -38,9 +43,4 @@ body {
     color: $clr-bg-dark;
     text-transform: uppercase;
   }
-}
-
-.bar {
-  font-size: 0.75rem;
-  font-weight: 700;
 }

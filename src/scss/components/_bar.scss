@@ -28,15 +28,4 @@
     background: $clr-white;
     border-radius: 50%;
   }
-
-  &::before {
-    content: "0 GB";
-    position: absolute;
-    inset: 1.9rem auto auto 0;
-  }
-
-  &__amount-max {
-    position: absolute;
-    inset: 1.9rem 0 auto auto;
-  }
 }

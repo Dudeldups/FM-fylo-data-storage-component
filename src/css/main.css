@@ -94,17 +94,16 @@ body {
     text-align: center;
   }
 }
+.usage__amounts {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
 .usage__amount-left {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.0625rem;
   color: #0c122c;
   text-transform: uppercase;
-}
-
-.bar {
-  font-size: 0.75rem;
-  font-weight: 700;
 }
 
 body {
@@ -119,7 +118,7 @@ body {
   body {
     background-image: url("../assets/images/bg-desktop.png");
     background-position: bottom;
-    background-size: 100% 50%;
+    background-size: cover;
   }
 }
 
@@ -135,6 +134,7 @@ body {
 }
 @media (min-width: 50em) {
   .main-container {
+    align-items: flex-end;
     grid-template-columns: 21.875rem 1fr;
     gap: 1.88rem;
     width: min(100%, 57.5rem);
@@ -160,24 +160,30 @@ body {
   margin-top: 2rem;
 }
 
-.usage__wrapper {
+.usage {
+  display: grid;
+  position: relative;
   padding: 2rem clamp(
     1rem,
-    30vw + -5rem,
-    2.5rem
-  ) 0;
+    20vw + -3rem,
+    2rem
+  ) 3.5rem;
   border-radius: 0.625rem;
   width: 100%;
 }
+@media (min-width: 50em) {
+  .usage {
+    padding: 2.5rem;
+  }
+}
 .usage__amount-left {
-  position: relative;
+  position: absolute;
   inset: auto 0 0;
   transform: translateY(50%);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.56rem;
-  margin-top: 0.25rem;
   margin-inline: auto;
   padding: 1rem;
   width: 11.1875rem;
@@ -186,11 +192,27 @@ body {
   border-radius: 0.625rem;
 }
 @media (min-width: 50em) {
+  .usage__amount-left {
+    inset: 0 2.5rem auto auto;
+    transform: translateY(-60%);
+    border-bottom-right-radius: 0;
+  }
   .usage__amount-left::after {
-    content: url("../assets/images/triangle.svg");
+    content: "";
     position: absolute;
     inset: auto 0 0 auto;
+    width: 0;
+    height: 0;
+    border: 0.6rem solid #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: translateY(95%);
   }
+}
+.usage__amounts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
 }
 
 .bar {
@@ -216,13 +238,4 @@ body {
   aspect-ratio: 1/1;
   background: #fff;
   border-radius: 50%;
-}
-.bar::before {
-  content: "0 GB";
-  position: absolute;
-  inset: 1.9rem auto auto 0;
-}
-.bar__amount-max {
-  position: absolute;
-  inset: 1.9rem 0 auto auto;
 }/*# sourceMappingURL=main.css.map */
