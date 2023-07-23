@@ -124,6 +124,7 @@ body {
 
 .container-bg {
   background: #1e2d69;
+  box-shadow: 0 4.7rem 6.25rem -1.8rem rgba(0, 0, 0, 0.25);
 }
 
 .main-container {
@@ -190,6 +191,7 @@ body {
   height: 4.5rem;
   background: #fff;
   border-radius: 0.625rem;
+  box-shadow: 0 4.7rem 6.25rem -1.8rem rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 50em) {
   .usage__amount-left {
@@ -203,7 +205,7 @@ body {
     inset: auto 0 0 auto;
     width: 0;
     height: 0;
-    border: 0.6rem solid #fff;
+    border: 0.7rem solid #fff;
     border-bottom-color: transparent;
     border-left-color: transparent;
     transform: translateY(95%);
